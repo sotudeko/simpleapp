@@ -1,12 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.myco.ateam.hashing</groupId>
-  <artifactId>simpleapp</artifactId>
-  <packaging>jar</packaging>
-  <version>1.1</version>
-  <name>simpleapp</name>
-  <url>http://maven.apache.org</url>
 
   <!-- 
    java -cp target/simpleapp-1.0.jar com.myco.ateam.hashing.App 123456
@@ -17,8 +11,17 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <teamname>ateam</teamname>
   </properties>
 
+  <version>2.1</version>
+
+
+  <groupId>com.myco.${teamname}.hashing</groupId>
+  <artifactId>simpleapp</artifactId>
+  <packaging>jar</packaging>
+  <name>simpleapp</name>
+  <url>http://maven.apache.org</url>
 
   <dependencies>
 
@@ -60,7 +63,7 @@
               <configuration>
                 <transformers>
                   <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                    <mainClass>com.myco.ateam.hashing.App</mainClass>
+                    <mainClass>com.myco.${teamname}.hashing.App</mainClass>
                   </transformer>
                 </transformers>
               </configuration>
@@ -88,14 +91,22 @@
 
   <!-- to publish to nexus -->
   <distributionManagement>
+
     <snapshotRepository>
       <id>nexus-snapshots</id>
       <url>http://localhost:8081/repository/maven-snapshots</url>
     </snapshotRepository>
+
+<!--    <repository>-->
+<!--      <id>nexus-releases</id>-->
+<!--      <url>http://localhost:8081/repository/maven-releases</url>-->
+<!--    </repository>-->
+
     <repository>
-      <id>nexus-releases</id>
+      <id>${teamname}</id>
       <url>http://localhost:8081/repository/maven-releases</url>
     </repository>
+
   </distributionManagement>
 
 </project>

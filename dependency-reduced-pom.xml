@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.myco.ateam.hashing</groupId>
+  <groupId>com.myco.${teamname}.hashing</groupId>
   <artifactId>simpleapp</artifactId>
   <name>simpleapp</name>
-  <version>1.1</version>
+  <version>2.1</version>
   <url>http://maven.apache.org</url>
   <build>
     <plugins>
@@ -20,7 +20,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.myco.ateam.hashing.App</mainClass>
+                  <mainClass>com.myco.${teamname}.hashing.App</mainClass>
                 </transformer>
               </transformers>
             </configuration>
@@ -53,7 +53,7 @@
   </dependencies>
   <distributionManagement>
     <repository>
-      <id>nexus-releases</id>
+      <id>bteam</id>
       <url>http://localhost:8081/repository/maven-releases</url>
     </repository>
     <snapshotRepository>
@@ -62,6 +62,7 @@
     </snapshotRepository>
   </distributionManagement>
   <properties>
+    <teamname>ateam</teamname>
     <maven.compiler.source>1.8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.target>1.8</maven.compiler.target>
