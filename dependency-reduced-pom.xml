@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.myco.hashing</groupId>
-  <artifactId>a-simpleapp</artifactId>
-  <name>a-simpleapp</name>
-  <version>1.0</version>
+  <groupId>com.myco.ateam.hashing</groupId>
+  <artifactId>simpleapp</artifactId>
+  <name>simpleapp</name>
+  <version>1.1</version>
   <url>http://maven.apache.org</url>
   <build>
     <plugins>
@@ -20,7 +20,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.myco.hashing.App</mainClass>
+                  <mainClass>com.myco.ateam.hashing.App</mainClass>
                 </transformer>
               </transformers>
             </configuration>

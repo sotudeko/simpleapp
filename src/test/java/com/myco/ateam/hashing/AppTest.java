@@ -1,8 +1,7 @@
-package com.myco.hashing;
+package com.myco.ateam.hashing;
 
 
 
-import com.myco.hashing.App;
 import org.junit.Assert;
 import org.junit.Test;
 

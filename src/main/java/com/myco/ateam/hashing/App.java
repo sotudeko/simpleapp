@@ -1,4 +1,4 @@
-package com.myco.hashing;
+package com.myco.ateam.hashing;
 
 import org.apache.commons.codec.digest.DigestUtils;
 
