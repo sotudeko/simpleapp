@@ -1,16 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.myco.hashing</groupId>
-  <artifactId>a-simpleapp</artifactId>
+  <groupId>com.myco.ateam.hashing</groupId>
+  <artifactId>simpleapp</artifactId>
   <packaging>jar</packaging>
   <version>1.0</version>
-  <name>a-simpleapp</name>
+  <name>simpleapp</name>
   <url>http://maven.apache.org</url>
 
   <!-- 
-   java -cp target/a-simpleapp-1.0.jar com.myco.hashing.App 123456
-   java -jar target/a-simpleapp-1.0.jar 123456
+   java -cp target/simpleapp-1.0.jar com.myco.ateam.hashing.App 123456
+   java -jar target/simpleapp-1.0.jar 123456
   -->
 
   <properties>
@@ -60,7 +60,7 @@
               <configuration>
                 <transformers>
                   <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                    <mainClass>com.myco.hashing.App</mainClass>
+                    <mainClass>com.myco.ateam.hashing.App</mainClass>
                   </transformer>
                 </transformers>
               </configuration>
