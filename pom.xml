@@ -15,8 +15,7 @@
   </properties>
 
   <version>2.1</version>
-
-
+  
   <groupId>com.myco.${teamname}.hashing</groupId>
   <artifactId>simpleapp</artifactId>
   <packaging>jar</packaging>
@@ -70,7 +69,6 @@
             </execution>
           </executions>
         </plugin>
-
 
     </plugins>
 </build>
