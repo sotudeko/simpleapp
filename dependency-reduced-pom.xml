@@ -9,6 +9,25 @@
   <build>
     <plugins>
       <plugin>
+        <groupId>com.sonatype.clm</groupId>
+        <artifactId>clm-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>index</goal>
+              <goal>attach</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <serverUrl>http://localhost:8077</serverUrl>
+          <applicationId>scm-simpleapp</applicationId>
+          <stage>build</stage>
+          <username>admin</username>
+          <password>admin123</password>
+        </configuration>
+      </plugin>
+      <plugin>
         <artifactId>maven-shade-plugin</artifactId>
         <version>3.2.0</version>
         <executions>
@@ -53,7 +72,7 @@
   </dependencies>
   <distributionManagement>
     <repository>
-      <id>bteam</id>
+      <id>${teamname}</id>
       <url>http://localhost:8081/repository/maven-releases</url>
     </repository>
     <snapshotRepository>
@@ -62,9 +81,9 @@
     </snapshotRepository>
   </distributionManagement>
   <properties>
-    <teamname>ateam</teamname>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.source>1.8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <teamname>ateam</teamname>
   </properties>
 </project>

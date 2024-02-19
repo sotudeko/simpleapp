@@ -42,6 +42,27 @@
   <build>
     <plugins>
 
+      <plugin>
+        <groupId>com.sonatype.clm</groupId>
+        <artifactId>clm-maven-plugin</artifactId>
+        <configuration>
+            <serverUrl>http://localhost:8077</serverUrl>
+            <applicationId>scm-simpleapp</applicationId>
+            <stage>build</stage>
+            <username>admin</username>
+            <password>admin123</password>
+        </configuration>
+        <executions>
+            <execution>
+                <goals>
+                    <goal>index</goal>
+                    <goal>attach</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
+
+
       <!-- use this maven-shade-plugin to create an uber/fat-jar 
          – group everything into a single jar file. -->
 
